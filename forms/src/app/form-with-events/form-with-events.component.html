@@ -1,0 +1,14 @@
+<div>
+    <h2>Demo Form: with events</h2>
+    <form [formGroup] = "myForm"
+            [class.error] = "!myForm.valid && myForm.touched">
+        
+        <div>
+            <label>SKU</label>
+
+            <input type="text"
+                    [formControl]="sku">
+        </div>
+
+    </form>
+</div>

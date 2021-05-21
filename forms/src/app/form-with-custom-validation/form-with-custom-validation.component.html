@@ -1,0 +1,16 @@
+<div>
+    <h2>Demo Form: with custom validation</h2>
+    <form [formGroup] = "myForm"
+            [class.error] = "!myForm.valid && myForm.touched">
+        
+        <div>
+            <label>SKU</label>
+
+            <input type="text"
+                    [formControl]="myForm.controls['sku']">
+
+            <div *ngIf="myForm.controls['sku'].hasError('invalidSku')">SKU must begin with <span>123</span></div>
+        </div>
+
+    </form>
+</div>
