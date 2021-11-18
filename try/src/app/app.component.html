@@ -1,0 +1,39 @@
+<h1>For Test and Try stuff</h1>
+
+
+
+<app-a-component></app-a-component>
+<app-b-component></app-b-component>
+
+
+
+
+<p>2+2= {{2+2}}</p>
+<div>
+  <div><p>绑定</p></div>
+  <div>
+    <button (click)="btnClick($event)">button</button>
+  </div>
+</div>
+
+<p>{{ 'aaa' | uppercase }}</p>
+
+<input type="text" [(ngModel)]="name">
+<p>{{ name }}</p>
+
+<h1> use of @Input</h1>
+
+<input type="text" [(ngModel)]="childName">
+
+<app-child [childName] = "childName"
+  (childEvent) = "parentClick($event)" #test></app-child>
+
+<h1> use of @Output</h1>
+
+<h2>parent component</h2>
+
+<p>the number is {{ outputNum }}</p>
+
+<button (click) = "test.childAlert()">Child Alert</button>
+<app-a-component></app-a-component>
+<app-b-component></app-b-component>
